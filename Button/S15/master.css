@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    gap: 40PX;
+    background: #27282c;
+}
+a{
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 30px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+a:hover{
+    letter-spacing: 5px;
+}
+.a:hover{
+    background: rgb(39, 39, 255);
+    box-shadow: 0 0 35px rgb(39, 39, 255);
+    color: rgb(39, 39, 255);
+}
+.b:hover{
+    background: rgb(255, 30, 30);
+    box-shadow: 0 0 35px rgb(255, 30, 30);
+    color: rgb(255, 30, 30);
+}
+.c:hover{
+    background: rgb(0, 255, 0);
+    box-shadow: 0 0 35px rgb(0, 255, 0);
+    color:  rgb(0, 255, 0);
+}
+a::before{
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+}
+a>span{
+    position: relative;
+    z-index: 1;
+}
+a>i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+a>i::before{
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 100%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #27282c;
+    transition: 0.5s;
+}
+a>.d::before{
+    border: 2px solid rgb(39, 39, 255);
+}
+a>.e::before{
+    border: 2px solid rgb(255, 30, 30);
+}
+a>.f::before{
+    border: 2px solid rgb(0, 255, 0);
+}
+a:hover i::before{
+    left: 0%;
+    transform: translateX(-50%) rotate(45deg);
+}
+a:hover .d::before{
+    box-shadow: 40px 39px rgb(39, 39, 255);
+    left: 0%;
+    transform: translateX(-50%) rotate(45deg);
+}
+a:hover .e::before{
+    box-shadow: 40px 39px rgb(255, 30, 30);
+    left: 0%;
+    transform: translateX(-50%) rotate(45deg);
+}
+a:hover .f::before{
+    box-shadow: 40px 39px rgb(0, 255, 0);
+    left: 0%;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+a>i::after{
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #27282c;
+    transition: 0.5s;
+}
+a>.d::after{
+    border: 2px solid rgb(39, 39, 255);
+}
+a>.e::after{
+    border: 2px solid rgb(255, 30, 30);
+}
+a>.f::after{
+    border: 2px solid rgb(0, 255, 0);
+}
+a:hover i::after{
+    left: 100%;
+    transform: translateX(-50%) rotate(-45deg);
+}
+a:hover .d::after{
+    box-shadow: 38px -39px rgb(39, 39, 255);
+    left: 100%;
+    transform: translateX(-50%) rotate(-45deg);
+}
+a:hover .e::after{
+    box-shadow: 38px -39px rgb(255, 30, 30);
+    left: 100%;
+    transform: translateX(-50%) rotate(-45deg);
+}
+a:hover .f::after{
+    box-shadow: 38px -39px rgb(0, 255, 0);
+    left: 100%;
+    transform: translateX(-50%) rotate(-45deg);
+}
